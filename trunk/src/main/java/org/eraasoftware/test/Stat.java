@@ -1,4 +1,4 @@
-package com.eraasoftware.test;
+package org.eraasoftware.test;
 
 import java.util.HashMap;
 import java.util.Map;
