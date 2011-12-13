@@ -58,7 +58,7 @@ public class Stat {
 		Map<String, Object> root = new HashMap<String, Object>();
 		root.put("stats", stats);
 		root.put("rows", getRows(stats));
-		new GoogleGraph().applyTemplateSilent("gchart.html", root);
+		new Report().applyTemplateSilent("gchart.html", root);
 	}
 
 }
