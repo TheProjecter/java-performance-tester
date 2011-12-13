@@ -10,18 +10,18 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
-public class GoogleGraph {
+public class Report {
 	Configuration cfg = new Configuration();
 
 	public static void main(String[] args) {
 		Map<String, Object> root = new HashMap<String, Object>();
 
-		new GoogleGraph().applyTemplateSilent("gchart.html", root);
+		new Report().applyTemplateSilent("gchart.html", root);
 	}
 
 	public void applyTemplate(String templateName, Map<String, Object> root, Writer writer) throws IOException,
 			TemplateException {
-		cfg.setClassForTemplateLoading(GoogleGraph.class, "");
+		cfg.setClassForTemplateLoading(Report.class, "");
 		Template temp = cfg.getTemplate(templateName);
 		root.put("body", templateName);
 		temp.process(root, writer);
