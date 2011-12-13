@@ -1,4 +1,4 @@
-package org.eraasoftware.test;
+package nf.fr.eraasoft.test;
 
 public class JobStat {
 	public long getEnd() {

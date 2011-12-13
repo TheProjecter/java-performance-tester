@@ -1,4 +1,4 @@
-package org.eraasoftware.test;
+package nf.fr.eraasoft.test;
 
 import java.util.ArrayList;
 import java.util.List;
