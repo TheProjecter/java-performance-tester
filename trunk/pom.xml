@@ -7,8 +7,13 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>myserver</name>
+	<name>Java Performance Test Tools</name>
 	<url>http://maven.apache.org</url>
+<parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -54,10 +59,5 @@
 		</pluginManagement>
 		</build>
 
-	<repositories>
-		<repository>
-			<id>wordrak</id>
-			<url>http://wordrak.github.com/repo</url>
-		</repository>
-	</repositories>
+
 </project>
