@@ -10,11 +10,14 @@
 	<name>Java Performance Test Tools</name>
 	<url>http://maven.apache.org</url>
 	
-<parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>7</version>
-  </parent>
+	<parent>
+    	<groupId>org.sonatype.oss</groupId>
+    	<artifactId>oss-parent</artifactId>
+    	<version>7</version>
+    </parent>
+     <scm>
+    	<developerConnection>scm:svn:https://java-performance-tester.googlecode.com/svn/trunk</developerConnection>
+    </scm>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -1,7 +1,9 @@
 package nf.fr.eraasoft.test;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
@@ -54,10 +56,15 @@ public class Bench {
 	}
 
 	public void displayStat() {
-		Stat.displayGraph(stats);
+		Stat.displayGraph(stats, graphContext);
 		for (Stat stat : stats) {
 			System.out.println(stat.toString());
 		}
+	}
+	Map<String, Object> graphContext = new Hashtable<String, Object>();
+	public Bench graphTitle(String graphTitle) {
+		graphContext.put("graphtitle", graphTitle);
+		return this;
 	}
 
 	public void launch() throws InterruptedException {
@@ -76,7 +83,7 @@ public class Bench {
 
 					System.out.println();
 					if (pause > 0) {
-						Stat.displayGraph(stats);
+						Stat.displayGraph(stats, graphContext);
 						Thread.sleep(pause);
 					}
 				} catch (InterruptedException e) {
