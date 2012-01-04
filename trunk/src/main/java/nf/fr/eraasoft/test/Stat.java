@@ -53,11 +53,12 @@ public class Stat {
 		return b.toString();
 	}
 
-	public static void displayGraph(Stat[] stats) {
-
-		Map<String, Object> root = new HashMap<String, Object>();
+	public static void displayGraph(Stat[] stats, Map<String, Object> root) {
+		root.put("graphtitle","title");
 		root.put("stats", stats);
 		root.put("rows", getRows(stats));
+		root.put("hAxis_title", "Threads");
+		root.put("vAxis_title", "Duration (ms)");
 		new Report().applyTemplateSilent("gchart.html", root);
 	}
 
